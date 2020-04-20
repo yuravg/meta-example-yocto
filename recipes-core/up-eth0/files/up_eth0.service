@@ -1,0 +1,14 @@
+[Unit]
+Description=Up interface eth0
+After=network.target
+Requires=network.target
+
+[Service]
+Type=forking
+ExecStart=/sbin/ifup eth0
+ExecStop=/sbin/fidown eth0
+StandardOutput=tty
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target
