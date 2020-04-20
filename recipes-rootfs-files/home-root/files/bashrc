@@ -1,0 +1,24 @@
+# ~/.bashrc: executed by bash(1) for non-login shells.
+
+export PS1='\u@\h:\w\$ '
+umask 022
+
+# Alias for ls, colorize
+export LS_OPTIONS='--color=auto'
+alias ls='ls $LS_OPTIONS'
+alias la='ls -AF'
+alias ll='ls -lAF'
+alias lh='ls -lAFh'
+
+# Some more alias to avoid making mistakes:
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Set locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+# Replacement CapsLock with Ctrl
+loadkeys emacs

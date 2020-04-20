@@ -1,0 +1,8 @@
+# ~/.profile: executed by Bourne-compatible login shells.
+
+if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+fi
+
+# path set by /etc/profile
+# export PATH
