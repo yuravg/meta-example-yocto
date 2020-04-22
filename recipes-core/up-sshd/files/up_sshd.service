@@ -1,0 +1,13 @@
+[Unit]
+Description=Up sshd after power on
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c 'sleep 5 ; systemctl start sshd'
+StandardOutput=tty
+TTYPath=/dev/tty1
+
+[Install]
+WantedBy=multi-user.target
